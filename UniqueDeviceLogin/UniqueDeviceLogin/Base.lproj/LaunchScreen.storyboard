@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UniqueDeviceLogin" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="9AU-Zx-gt4">
+                                <rect key="frame" x="170.5" y="217" width="260.5" height="167"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="167" id="Ewc-Gn-LLO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                <color key="textColor" red="0.73031145134228193" green="0.30075503355704697" blue="0.4450503355704698" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016-05-08" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPS-QA-vQ9">
+                                <rect key="frame" x="207" y="417" width="187" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="187" id="oEr-p7-92z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zPS-QA-vQ9" firstAttribute="top" secondItem="9AU-Zx-gt4" secondAttribute="bottom" constant="33" id="2L4-So-Yl9"/>
+                            <constraint firstItem="9AU-Zx-gt4" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Hsj-Bz-RIa"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="zPS-QA-vQ9" secondAttribute="bottom" constant="131" id="In3-mk-eN3"/>
+                            <constraint firstItem="zPS-QA-vQ9" firstAttribute="top" secondItem="9AU-Zx-gt4" secondAttribute="bottom" constant="23.5" id="Zf7-fL-Vko"/>
+                            <constraint firstItem="zPS-QA-vQ9" firstAttribute="centerX" secondItem="9AU-Zx-gt4" secondAttribute="centerX" id="lu7-e1-kbY"/>
+                            <constraint firstItem="9AU-Zx-gt4" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="rsH-p1-4Rv"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Zf7-fL-Vko"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="186" y="295"/>
+        </scene>
+    </scenes>
+</document>

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <AFNetworking/AFNetworking.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,43 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+//    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+//    AFHTTPRequestSerializer *requestSerializer = [AFHTTPRequestSerializer serializer];
+//    requestSerializer.timeoutInterval = 5;
+//    AFHTTPResponseSerializer *responseSerializer = [AFHTTPResponseSerializer serializer];
+//    [manager POST:@"https://107.170.219.203" parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+//        NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        NSLog(@"%@",[error description]);
+//    }];
+
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://www.baidu.com"]];
+    [request setHTTPMethod:@"GET"];
+    [request setTimeoutInterval:3];
+    
+//    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://www.google.com"]];
+//    NSLog(@"",request.timeoutInterval);
+    
+//    NSURLResponse *response = [[NSURLResponse alloc] initWithURL:[NSURL URLWithString:@"https://107.170.219.203"] MIMEType:@"text/plain" expectedContentLength:-1 textEncodingName:@"utf-8"];
+//    NSError *error;
+//    NSData *data = [[NSData alloc] init];
+//    data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    //[NSURLConnection connectionWithRequest:request delegate:self];
+//    NSString *response = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//    NSLog(@"%@",response);
+
+//    NSURLSession *session = [];
+    NSURLResponse *response = nil;
+    NSError *error = nil;
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+
+    NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"%@",string);
+    
+    
+    
+    
     return YES;
 }
 
@@ -42,6 +80,16 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    
 }
 
 #pragma mark - Core Data stack
